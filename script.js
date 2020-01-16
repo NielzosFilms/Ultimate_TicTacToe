@@ -14,8 +14,14 @@ function subBoxClick(clicked_box){
             if(start || clicked_box.style.backgroundColor == "lightblue"){
                 start = false;
                 clicked_box.innerHTML = turn;
-                if(turn == "X") turn = "O";
-                else if(turn == "O") turn = "X";
+                if(turn == "X"){
+                    clicked_box.style.color = "blue";
+                    turn = "O"
+                }
+                else if(turn == "O") {
+                    clicked_box.style.color = "red";
+                    turn = "X"
+                }
                 checkSubWinCondition(clicked_box);
                 if(document.getElementById('main_R'+sub_R+'K'+sub_K).innerHTML == ""){
                     setMainBackgroundColor(clicked_box);
@@ -49,38 +55,54 @@ function checkSubWinCondition(clicked_box){
 
     if(sub_R1K1 == "X" && sub_R1K2 == "X" && sub_R1K3 == "X"){ //horizantal check
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "X";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "blue";
     }else if(sub_R2K1 == "X" && sub_R2K2 == "X" && sub_R2K3 == "X"){
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "X";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "blue";
     }else if(sub_R3K1 == "X" && sub_R3K2 == "X" && sub_R3K3 == "X"){
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "X";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "blue";
     }else if(sub_R1K1 == "X" && sub_R2K1 == "X" && sub_R3K1 == "X"){ //vertical check
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "X";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "blue";
     }else if(sub_R1K2 == "X" && sub_R2K2 == "X" && sub_R3K2 == "X"){
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "X";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "blue";
     }else if(sub_R1K3 == "X" && sub_R2K3 == "X" && sub_R3K3 == "X"){
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "X";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "blue";
     }else if(sub_R1K1 == "X" && sub_R2K2 == "X" && sub_R3K3 == "X"){ //diagonal check
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "X";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "blue";
     }else if(sub_R3K1 == "X" && sub_R2K2 == "X" && sub_R1K3 == "X"){
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "X";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "blue";
     }
 
     if(sub_R1K1 == "O" && sub_R1K2 == "O" && sub_R1K3 == "O"){ //horizantal check
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "O";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "red";
     }else if(sub_R2K1 == "O" && sub_R2K2 == "O" && sub_R2K3 == "O"){
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "O";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "red";
     }else if(sub_R3K1 == "O" && sub_R3K2 == "O" && sub_R3K3 == "O"){
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "O";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "red";
     }else if(sub_R1K1 == "O" && sub_R2K1 == "O" && sub_R3K1 == "O"){ //vertical check
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "O";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "red";
     }else if(sub_R1K2 == "O" && sub_R2K2 == "O" && sub_R3K2 == "O"){
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "O";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "red";
     }else if(sub_R1K3 == "O" && sub_R2K3 == "O" && sub_R3K3 == "O"){
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "O";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "red";
     }else if(sub_R1K1 == "O" && sub_R2K2 == "O" && sub_R3K3 == "O"){ //diagonal check
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "O";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "red";
     }else if(sub_R3K1 == "O" && sub_R2K2 == "O" && sub_R1K3 == "O"){
         document.getElementById('main_R'+main_R+'K'+main_K).innerHTML = "O";
+        document.getElementById('main_R'+main_R+'K'+main_K).style.color = "red";
     }
 }
 
